@@ -25,8 +25,8 @@ async function carregarDados() {
 function nomeTutor (TutorId){
   for (const tutor of tutores.value) {
     //tutor.id = TutorId
-    if( tutor.id == tutor.value){
-      return tutor.value;
+    if( tutor.id == tutorId){
+      return tutor.nome;
     }
   }
   return 'Tutor Não encontrado!';
