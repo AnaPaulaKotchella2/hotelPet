@@ -4,11 +4,22 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
+  
       path: '/',
-      name: 'home',
-      component: () => import('../views/HomeView.vue'),
+      redirect: '/pets'
     },
+    {
+      path: '/pets',
+      name: 'pets',
+      component: () => import('../views/PetsView.vue'),
+    },
+    {
+      path: '/pets/novo',
+      name: 'addPet',
+      component: () => import('../views/AddPetview.vue')
+    }
   ],
 });
 
 export default router;
+
